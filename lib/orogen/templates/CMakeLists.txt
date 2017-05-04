@@ -1,6 +1,9 @@
 PROJECT(<%= project.name %>)
 cmake_minimum_required(VERSION 2.6)
 
+include (FindPkgConfig)
+find_package(message_generation REQUIRED)
+
 SET (CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/<%= Generation::AUTOMATIC_AREA_NAME %>/config")
 INCLUDE(<%= project.name %>Base)
 
